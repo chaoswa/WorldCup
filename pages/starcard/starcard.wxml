@@ -1,2 +1,14 @@
-<!--pages/starcard/starcard.wxml-->
-<text>pages/starcard/starcard.wxml</text>
+<view class='container'>
+  <image class='topBg' src='../../images/starcard/topBg.png'></image>
+  <image class='topTxt' src='../../images/starcard/txtImg.png'></image>
+  <view class='cardList'>
+    <image class='cardBg' src='../../images/starcard/cardBg.png'></image>
+    <view class='cards'>
+      <image class='card active' wx:for="{{cards}}" src='{{item}}'></image>
+      <button class='btn' open-type='share'>
+        <image src='../../images/starcard/share.png'></image>
+        <view>分享拿星卡</view>
+      </button>
+    </view>
+  </view>
+</view>

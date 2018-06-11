@@ -1,0 +1,11 @@
+<!--pages/changeCard/changeCard.wxml-->
+<view class='container'>
+  <image class='topBg' src='../../images/starcard/topBg.png'></image>
+  <view class='cardList'>
+    <image class='cardBg' src='../../images/changecard/cardBg.png'></image>
+    <view class='cards'>
+      <image class='card' src='{{src}}'></image>
+      <button class='btn'>向好友索取星卡(转发好友)</button>
+    </view>
+  </view>
+</view>

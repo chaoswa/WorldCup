@@ -1,11 +1,12 @@
 {
   "pages": [
+    "pages/mycard/mycard",
+    "pages/starcard/starcard",
     "pages/agenda/agenda",
     "pages/index/index",
-   
-    "pages/starcard/starcard",
     "pages/user/user",
-    "pages/logs/logs"
+    "pages/logs/logs",
+    "pages/changeCard/changeCard"
   ],
   "window": {
     "backgroundTextStyle": "light",

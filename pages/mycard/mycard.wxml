@@ -1,0 +1,11 @@
+<!--pages/mycard/mycard.wxml-->
+<view class='container'>
+  <view class='cards'>
+    <view class='cardBox' wx:for="{{cards}}" wx:key="index" data-index='{{index}}' catchtap='clickCard'>
+      <image class='card' src='{{item}}'></image> 
+      <view class='cardNum'>0张</view>
+    </view>  
+  </view>
+  <view class='text'>集齐15张星卡瓜分百万红包</view>
+  <view class='btn'>领现金红包</view>
+</view>

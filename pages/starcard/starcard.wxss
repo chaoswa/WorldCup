@@ -1,1 +1,68 @@
 /* pages/starcard/starcard.wxss */
+page{
+  background-color: #fff;
+}
+.topTxt{
+  position: absolute;
+  top: 40rpx;
+  left: 18%;
+  width: 497rpx;
+  height: 178rpx;
+  z-index: 2;
+}
+.topBg{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 180rpx;
+  z-index: 1;
+}
+.cardList{
+  width: 100%;
+  height: 2100rpx;
+}
+.cardBg{
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.cards{
+  position: absolute;
+  top:25%;
+  left: 0;
+  width: 100%;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  align-items: center;
+}
+.card{
+  width: 200rpx;
+  height: 268rpx;
+  margin-bottom: 30rpx;
+  filter: grayscale(100%);
+}
+.active{
+  filter: grayscale(0%);
+}
+.btn{
+  margin-top: 100rpx;
+  width: 343rpx;
+  height: 102rpx;
+  font-size: 36rpx;
+  color: #663700;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+  border-radius: 55rpx;
+  background-color: #fec302;
+}
+.btn image{
+  width: 49rpx;
+  height: 48rpx;
+  margin-right:10rpx;
+}

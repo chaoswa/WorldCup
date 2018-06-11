@@ -1,0 +1,54 @@
+/* pages/mycard/mycard.wxss */
+page{
+  width: 100%;
+}
+
+.cards{
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  align-items: center;
+}
+.cardBox{
+  width: 200rpx;
+  height: 300rpx;
+  margin-top: 20rpx;
+  margin-bottom: 20rpx;
+}
+.card{
+  width: 200rpx;
+  height: 268rpx;
+  filter: grayscale(100%);
+}
+.cardNum{
+  width: 100%;
+  height: 30rpx;
+  font-size: 28rpx;
+  line-height: 30rpx;
+  text-align: center;
+  color: #fff;
+}
+.active{
+  filter: grayscale(0%);
+}
+.text{
+  width: 100%;
+  height: 55rpx;
+  margin-top: 50rpx;
+  line-height: 55rpx;
+  font-size: 28rpx;
+  color: #fff;
+  text-align: center;
+}
+.btn{
+  width: 343rpx;
+  height: 102rpx;
+  margin-top: 30rpx;
+  margin-bottom: 50rpx;
+  line-height: 102rpx;
+  border-radius: 55rpx;
+  font-size: 36rpx;
+  color: #663700;
+  background-color: #fec302;
+  text-align: center;
+}

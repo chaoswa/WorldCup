@@ -1,11 +1,19 @@
-// pages/starcard/starcard.js
+// pages/mycard/mycard.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    cards: ["../../images/starcard/card01.png", "../../images/starcard/card02.png", "../../images/starcard/card03.png", "../../images/starcard/card04.png", "../../images/starcard/card05.png","../../images/starcard/card06.png", "../../images/starcard/card07.png", "../../images/starcard/card08.png", "../../images/starcard/card09.png", "../../images/starcard/card10.png", "../../images/starcard/card11.png", "../../images/starcard/card12.png", "../../images/starcard/card13.png", "../../images/starcard/card14.png", "../../images/starcard/card15.png"]
+    cards: ["../../images/starcard/card01.png", "../../images/starcard/card02.png", "../../images/starcard/card03.png", "../../images/starcard/card04.png", "../../images/starcard/card05.png", "../../images/starcard/card06.png", "../../images/starcard/card07.png", "../../images/starcard/card08.png", "../../images/starcard/card09.png", "../../images/starcard/card10.png", "../../images/starcard/card11.png", "../../images/starcard/card12.png", "../../images/starcard/card13.png", "../../images/starcard/card14.png", "../../images/starcard/card15.png"]
+  },
+  
+  //点击卡片
+  clickCard:function(e){
+    let index=e.currentTarget.dataset.index;
+    wx.navigateTo({
+      url: `../changeCard/changeCard?index=${index}`,
+    })
   },
 
   /**
