@@ -1,0 +1,43 @@
+<!--index.wxml-->
+<view class="container">
+  <view class='top'>
+    <image class='top-title' src='../../images/index/title.png'></image>
+  </view>
+  <!--今日竞猜  -->
+  <view class='guessing'>
+    <view class='guessing-title'>今日竞猜</view>
+    <!--对战双方  -->
+    <view class='battle'>
+      <view class='battle-left'>
+        <image src='{{today_guessing_list[0].team_img}}'></image>
+        <view>{{today_guessing_list[0].team_name}}</view>
+      </view>
+      <view class='vs'>
+        <view class='vs-time'>23:00</view>
+        <view class='vs-tit'>VS</view>
+      </view>
+      <view class='battle-right'>
+        <image src='{{today_guessing_list[1].team_img}}'></image>
+        <view>{{today_guessing_list[1].team_name}}</view>
+      </view>
+    </view>
+    <!--竞猜剩余时间  -->
+    <view class='time'>剩余{{countDown}} 截止竞猜</view>
+    <!--竞猜选项  -->
+    <view class='select'>
+      <block wx:for='{{guessingOptions}}' wx:key=''>
+        <view data-val='{{item}}' bindtap='getOption'>{{item}}</view>
+      </block>
+    </view>
+    <view>
+      <form report-submit='true' bindsubmit="orderSign">
+        <button class='btn-ok' formType='submit'>提交竞猜</button>
+      </form>
+      <navigator class='result' url="" open-type="navigate">查看竞猜结果</navigator>
+    </view>
+  </view>
+  <!--bg  -->
+  <view class='bg'>
+    <image src='../../images/index/bg.png'></image>
+  </view>
+</view>

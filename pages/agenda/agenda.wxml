@@ -1,0 +1,75 @@
+<view class="page">
+  <!--顶部背景  -->
+  <view class='agenda-top'>
+    <image src='../../images/agenda/top.png'></image>
+  </view>
+  <!--选项卡   -->
+  <view class="page__bd">
+    <view class="weui-tab">
+      <view class="weui-navbar">
+        <block wx:for="{{tabs}}" wx:key="*this">
+          <view id="{{index}}" class="weui-navbar__item {{activeIndex == index ? 'weui-bar__item_on' : ''}}" bindtap="tabClick">
+            <view class="weui-navbar__title">{{item}}</view>
+          </view>
+          <text class='line'>|</text>
+        </block>
+        <view class="weui-navbar__slider" style="left: {{sliderLeft}}px; transform: translateX({{sliderOffset}}px); -webkit-transform: translateX({{sliderOffset}}px);"></view>
+      </view>
+      <view class="weui-tab__panel">
+        <view class='agenda-line'></view>
+        <!--赛程  -->
+        <view class="weui-tab__content" hidden="{{activeIndex != 0}}">
+          <view class='agenda-bor'>
+            <view class='bor-top'>2018-06-14 星期四</view>
+            <view class='bor-cont'>
+              <view class='battle-left'>
+                <image src='{{allAgenda[0].team_img}}'></image>
+                <view>{{allAgenda[0].team_name}}</view>
+              </view>
+              <view class='vs'>
+                <view class='vs-tit'>世界杯小组赛A组</view>
+                <view class='vs-time'>23:00</view>
+                <!-- 预约 -->
+                <view class='subscribe' bindtap='clickSub'>
+                  <image src='../../images/agenda/subscribe.png'></image>
+                </view>
+                <!--回顾  -->
+                <view class='review' wx:if='{{false}}'>精彩回顾</view>
+              </view>
+              <view class='battle-right'>
+                <image src='{{allAgenda[1].team_img}}'></image>
+                <view>{{allAgenda[1].team_name}}</view>
+              </view>
+            </view>
+          </view>
+        </view>
+        <!--积分  -->
+        <view class="weui-tab__content" hidden="{{activeIndex != 1}}">
+          <block wx:for='{{groupStage}}' wx:key=''>
+            <view class="table">
+              <view class='bor-top'>{{item}}</view>
+              <view class="tr tr-tit">
+                <view class="th">球队</view>
+                <view class="th">赛</view>
+                <view class="th">胜</view>
+                <view class="th">平</view>
+                <view class="th">负</view>
+                <view class="th">进</view>
+                <view class="th">积分</view>
+              </view>
+              <view class="tr" wx:for="{{4}}">
+                <view class="td">球队</view>
+                <view class="td">0</view>
+                <view class="td">0</view>
+                <view class="td">0</view>
+                <view class="td">0</view>
+                <view class="td">0</view>
+                <view class="td">0</view>
+              </view>
+            </view>
+          </block>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

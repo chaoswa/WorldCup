@@ -1,0 +1,48 @@
+{
+  "pages": [
+    "pages/agenda/agenda",
+    "pages/index/index",
+   
+    "pages/starcard/starcard",
+    "pages/user/user",
+    "pages/logs/logs"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#021252",
+    "navigationBarTitleText": "世界杯",
+    "navigationBarTextStyle": "#fff"
+  },
+  "tabBar": {
+    "color": "#888888",
+    "selectedColor": "#1d8923",
+    "borderStyle": "white",
+    "backgroundColor": "#ffffff",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "竞猜",
+        "iconPath": "images/tabicon/icon1.png",
+        "selectedIconPath": "images/tabicon/icon1_on.png"
+      },
+      {
+        "pagePath": "pages/agenda/agenda",
+        "text": "赛程",
+        "iconPath": "images/tabicon/icon2.png",
+        "selectedIconPath": "images/tabicon/icon2_on.png"
+      },
+      {
+        "pagePath": "pages/starcard/starcard",
+        "text": "球星卡",
+        "iconPath": "images/tabicon/icon3.png",
+        "selectedIconPath": "images/tabicon/icon3_on.png"
+      },
+      {
+        "pagePath": "pages/user/user",
+        "text": "个人中心",
+        "iconPath": "images/tabicon/icon4.png",
+        "selectedIconPath": "images/tabicon/icon4_on.png"
+      }
+    ]
+  }
+}

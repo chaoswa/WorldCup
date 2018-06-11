@@ -1,0 +1,105 @@
+page {
+  width: 100%;
+}
+
+.container {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  color: #fff;
+}
+button::after{
+  border:none;
+}
+
+.top-title {
+  width: 683rpx;
+  height: 378rpx;
+}
+
+.guessing {
+  width: 720rpx;
+  height: 574rpx;
+  background: rgba(15, 39, 115, 0.6);
+  position: absolute;
+  top: 320rpx;
+  box-shadow: 0 0 20rpx #000000;
+  display: flex;
+  flex-flow:column;
+  align-items: center;
+  justify-content:space-between;
+}
+.guessing-title{
+  margin: 30rpx 0;
+}
+.battle-left,.battle-right,.vs{
+  display: inline-block;
+  text-align: center;
+}
+.vs{
+  width: 217rpx;
+  height: 123rpx;
+  color: #fefefe;
+  vertical-align:top;
+}
+.vs-tit{
+  font-size: 60rpx;
+}
+.battle-left image,.battle-right image{
+  width: 217rpx;
+  height: 123rpx;
+}
+.time{
+  font-size: 30rpx;
+  color: #c6322e;
+  margin: 10rpx 0;
+}
+.select>view{
+  display: inline-block;
+  width: 215rpx;
+  height: 74rpx;
+  background-color: #104998;
+  text-align: center;
+  line-height: 74rpx;
+  margin: 0 2rpx;
+  font-size: 32rpx;
+  color: #039a4c;
+}
+.select>view:nth-of-type(1){
+  border-top-left-radius: 10rpx;
+  border-bottom-left-radius: 10rpx;
+}
+.select>view:nth-of-type(3){
+  border-top-right-radius: 10rpx;
+  border-bottom-right-radius: 10rpx;
+}
+.btn-ok,.result{
+  display: inline-block;
+  width: 320rpx;
+  height: 80rpx;
+  border-radius: 10rpx;
+  background-color: #c6322e;
+  text-align: center;
+  line-height: 80rpx;
+  margin: 30rpx 10rpx;
+  vertical-align: middle;
+  color: #fff;
+}
+.result{
+  background-color:rgb(0, 100, 47);
+}
+
+.bg {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  z-index: -10;
+}
+
+.bg image {
+  width: 100%;
+  height: 1206rpx;
+}
