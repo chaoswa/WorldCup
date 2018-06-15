@@ -1,0 +1,6 @@
+<!--pages/road/road.wxml-->
+<view class='container'>
+  <image class='topBg' src='../../images/index/bg.png'></image>
+  <image class='title' src='../../images/road/title.png'></image>
+  <view class='btn' bindtap='next'>马上参与</view>
+</view>

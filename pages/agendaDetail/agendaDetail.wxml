@@ -1,0 +1,102 @@
+<view class='container'>
+  <!--顶部背景  -->
+  <view class='agenda-top'>
+    <image src='../../images/top.png'></image>
+  </view>
+  <!--title  -->
+  <view class='team-bg'>
+    <!--对战双方  -->
+    <view class='battle'>
+      <view class='battle'>{{team_list.title}}</view>
+      <view class='battle-left'>
+        <image src='https://cfy.chaosuduokai.com/wordcup2018/{{team_list.team0_img}}'></image>
+        <view>{{team_list.team0_title}}</view>
+      </view>
+      <view class='vs'>
+        <view class='vs-time'>{{team_list.start_at}}</view>
+        <view class='vs-tit'>VS</view>
+      </view>
+      <view class='battle-right'>
+        <image src='https://cfy.chaosuduokai.com/wordcup2018/{{team_list.team1_img}}'></image>
+        <view>{{team_list.team1_title}}</view>
+      </view>
+    </view>
+    <image src='../../images/agenda/top_bg.png'></image>
+  </view>
+  <!--详情  -->
+  <view class='c_select'>
+    <view class="{{c_team?'active':'default'}}" bindtap='select_team'>球队阵容</view>
+    <view class="{{c_agenda?'active':'default'}}" bindtap='select_agenda'>赛况</view>
+    <view class="{{c_video?'active':'default'}}" bindtap='select_video'>视频回放</view>
+  </view>
+  <!--球队阵容  -->
+  <view class='detail' wx:if='{{c_team}}'>
+    <!--左边阵容  -->
+    <view class='detail-cont'>
+      <view class='detail-left'>
+        <view class='detail-title left'>
+          <image src='https://cfy.chaosuduokai.com/wordcup2018/{{team_list.team0_img}}'></image>
+          <view>{{team_list.team0_title}}</view>
+        </view>
+      </view>
+      <view class='battle-array'>
+        <block wx:for='{{team_list.team0}}' wx:key=''>
+          <view class='array-dec'>
+            <text class='battle-name'>{{item[1]}}</text>
+            <text class='battle-num'>{{item[2]}}</text>
+            <text class='battle-post'>{{item[0]}}</text>
+          </view>
+        </block>
+      </view>
+    </view>
+    <!--中间足球装饰  -->
+    <view class='football'>
+      <image src='../../images/agenda/decorate.png'></image>
+    </view>
+    <!--右边阵容  -->
+    <view class='detail-cont'>
+      <view class='detail-right'>
+        <view class='detail-title right'>
+          <image src='https://cfy.chaosuduokai.com/wordcup2018/{{team_list.team1_img}}'></image>
+          <view>{{team_list.team1_title}}</view>
+        </view>
+      </view>
+      <view class='battle-array'>
+        <block wx:for='{{team_list.team1}}' wx:key=''>
+          <view class='array-dec'>
+            <text class='battle-post'>{{item[0]}}</text>
+            <text class='battle-num'>{{item[2]}}</text>
+            <text class='battle-name'>{{item[1]}}</text>
+          </view>
+        </block>
+      </view>
+    </view>
+  </view>
+  <!--赛况  -->
+  <view class='real' wx:if='{{c_agenda}}'>
+    <view class='real-tit'>
+      <view class='th1'>比分</view>
+      <view class='th2'>时间</view>
+      <view class='th3'>球队</view>
+      <view class='th4'>状况</view>
+      <view class='th5'>球员</view>
+    </view>
+    <block wx:for='{{math_data}}' wx:key='index'>
+      <view class='real-cont' wx:if='{{have_real}}'>
+        <view class='th1'>({{item.score}})</view>
+        <view class='th2'>{{item.timeLine}}'</view>
+        <view class='th3'>{{item.team}}</view>
+        <view class='th4'>{{item.title}}</view>
+        <view class='th5'>{{item.player}}</view>
+      </view>
+    </block>
+    <view class='real-cont' wx:if='{{no_real}}'>比赛还未开始,请耐心等待...</view>
+  </view>
+  <!--视频回放  -->
+  <view class='video' wx:if='{{c_video}}'>
+    <video id="myVideo" src="{{team_list.video}}"
+      binderror="videoErrorCallback" controls wx:if='{{video}}'></video>
+    <view class='video-bor' wx:if='{{no_video}}'>暂无视频...</view>
+  </view>
+
+</view>

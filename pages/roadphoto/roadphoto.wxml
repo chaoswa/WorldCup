@@ -1,0 +1,29 @@
+<view class='container'>
+  <image class='topBg' wx:if='{{win}}' src='../../images/road32/winbg.png'></image>
+  <view class='content' wx:if="{{win}}">
+    <image class='winer' src='{{imgUrl}}{{winer.img}}'></image>
+    <image class='getwin2' src='../../images/road32/getwin2.png'></image>
+    <view class='wintext'>
+      <text class='wintxt'>我是{{nickname}}</text>
+      <text class='wintxt'>我支持的冠军之队是</text>
+      <text class='winName'>{{winer.title}}</text>
+    </view>
+    <view class='maerbg'>
+      <image class='maer' src='../../images/road32/maer.jpg'></image> 
+    </view>
+  </view>
+
+
+
+  <!--无  -->
+  <view class='no-have' wx:if='{{no_have}}'>
+    <image src='../../images/wu.png'></image>
+    <view class='no-title'>您还没有参与世界杯冠军预测</view>
+    <view class='no-dec'>完成预测就可以瓜分百万红包哦！</view>
+    <view class='back' bindtap='back'>马上参与</view>
+  </view>
+  <!--bg  -->
+  <view class='bg' wx:if='{{no_have}}'>
+    <image src='../../images/road32/bg.png'></image>
+  </view>
+</view>

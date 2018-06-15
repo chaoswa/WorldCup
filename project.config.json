@@ -12,7 +12,7 @@
 	},
 	"compileType": "miniprogram",
 	"libVersion": "2.0.9",
-	"appid": "touristappid",
+	"appid": "wx11e3f05434282241",
 	"projectname": "WorldCup",
 	"condition": {
 		"search": {
@@ -23,13 +23,60 @@
 			"current": -1,
 			"list": []
 		},
+		"plugin": {
+			"current": -1,
+			"list": []
+		},
 		"game": {
 			"currentL": -1,
 			"list": []
 		},
 		"miniprogram": {
 			"current": -1,
-			"list": []
+			"list": [
+				{
+					"id": 0,
+					"name": "赛况详情",
+					"pathName": "pages/agendaDetail/agendaDetail",
+					"query": ""
+				},
+				{
+					"id": 1,
+					"name": "竞猜记录",
+					"pathName": "pages/forecast/forecast",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "赛程",
+					"pathName": "pages/agenda/agenda",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "冠军之路",
+					"pathName": "pages/road/road",
+					"query": ""
+				},
+				{
+					"id": 4,
+					"name": "11",
+					"pathName": "pages/mycard/mycard",
+					"query": ""
+				},
+				{
+					"id": 5,
+					"name": "分享进入",
+					"pathName": "pages/index/index",
+					"query": "shareId=NyAyIDE1Mjg4ODAwMDYgMg==&status=1&cardId=1",
+					"scene": "1044",
+					"shareInfo": {
+						"groupName": "测试模拟群0",
+						"shareName": "OpitViuEgX9yPiqw0IT1pyTi_Xyh15KlD_WsytJbMBo@cr4dev",
+						"shareKey": "HvAR4SDsYvsSMtKRgooEhaNlqWAhaY5GbDrYxh-G9xy8y-2NJHGu2BvTHV86mo9mn4IofXwYPW9_OsSKwf9pQQ~~"
+					}
+				}
+			]
 		}
 	}
 }

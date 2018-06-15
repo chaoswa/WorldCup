@@ -1,0 +1,99 @@
+<!--pages/road4/road4.wxml-->
+<view class='container'>
+  <image class='topBg' src='../../images/road32/bg.png'></image>
+  <view class='content'>
+    <view class='step1'>第四步：1/4决赛（选择晋级球队）</view>
+    <view class='select'>
+      <image class='good' src='../../images/road32/good.png'></image>
+      <view class='group'>
+        <view class='top'>
+          <view class='one'>
+            <image class='win' src='../../images/road32/win.png'></image>
+            <view class='user'>
+              <image src='{{imgUrl}}{{data3[0].img}}'></image>
+            </view>
+            <view class='name {{data3[0]?"active":""}}'><text>{{data3[0].title}}</text></view>
+          </view>
+        </view>
+        <view class='middle'>
+          <view class='one' id='0' bindtap='select3'>
+            <view class='user'>
+              <image src='{{imgUrl}}{{data2[0].img}}'></image>
+            </view>
+            <view class='name {{select5?"active":""}}'><text>{{data2[0].title}}</text></view>
+          </view>
+          <view class='one' id='1' bindtap='select3'>
+            <view class='user'>
+              <image src='{{imgUrl}}{{data2[1].img}}'></image>
+            </view>
+            <view class='name {{select6?"active":""}}'><text>{{data2[1].title}}</text></view>
+          </view>
+        </view>
+        <view class='bottom'>
+
+          <view class='tiem'>
+            <view class='one' id='0' bindtap='select1'>
+              <view class='user'>
+                <image src='{{imgUrl}}{{data[0].img}}'></image>
+              </view>
+              <view class='name {{select1?"active":""}}'><text>{{data[0].title}}</text></view>
+           </view>
+           <view class='one' id='1' bindtap='select1'>
+              <view class='user'>
+                <image src='{{imgUrl}}{{data[1].img}}'></image>
+              </view>
+              <view class='name  {{select2?"active":""}}'><text>{{data[1].title}}</text></view>
+           </view>
+          </view>
+
+
+          <view class='tiem'>
+           <view class='one' id='2' bindtap='select2'>
+              <view class='user'>
+                <image src='{{imgUrl}}{{data[2].img}}'></image>
+              </view>
+              <view class='name {{select3?"active":""}}'>
+                <text>{{data[2].title}}</text>
+              </view>
+           </view>
+           <view class='one' id='3' bindtap='select2'>
+              <view class='user'>
+                <image src='{{imgUrl}}{{data[3].img}}'></image>
+              </view>
+              <view class='name {{select4?"active":""}}'><text>{{data[3].title}}</text></view>
+           </view>
+          </view>
+        </view>
+      </view>
+    </view>
+    <button class='next' disabled='{{next}}' bindtap='next'>确定</button>
+  </view>  
+
+  <view class='model' wx:if='{{show}}'>
+    <view class='s_model_content'>
+      <image class='get' src='../../images/road32/get.png'></image>
+      <image class='getuser' src='{{imgUrl}}{{data3[0].img}}'></image> 
+      <image class='getWin' src='../../images/road32/getWin.png'></image>
+      <view class='text1'>您选择的冠军球队：<text>{{data3[0].title}}</text> </view>
+      <view class='text1'>恭喜您获得了"<text>瓜分百万大奖的机会</text>"</view>
+      <view class='text2'>冠军推演结果将于7月16日揭晓</view> 
+      <view class='text3'>冠军推演的图片将作为对讲的依据</view> 
+      <view class='btn'>
+        <view class='btn1'  bindtap='share'>保存图片</view>
+        <button class='btn2' open-type='share'>分享好友</button>
+      </view>
+    </view>
+  </view>
+
+  <canvas  canvas-id="shareImg" ></canvas>
+
+  <view hidden='{{hidden}}' class='model'>
+    <view class='modelContent'>
+      <image src='{{prurl}}' mode='widthFix'></image>
+      <button class='btn3' bindtap='save'>保存到手机</button>
+    </view>
+  </view>
+
+</view>
+
+

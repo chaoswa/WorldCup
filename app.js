@@ -4,6 +4,7 @@ App({
     
   },
   globalData: {
-    userInfo: null
+    userInfo: null,
+    loginData:null,  //用户配置
   }
 })

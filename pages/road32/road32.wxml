@@ -1,0 +1,64 @@
+<!--pages/road32/road32.wxml-->
+<view class='container'>
+  <image class='topBg' src='../../images/road32/bg.png'></image>
+  <view class='content'>
+    <view class='step1'>第一步：32进16（点击分组选择晋级球队）</view>
+    <view class='select'>
+      <view class='item {{current==index?"click":""}}'
+        data-index='{{index}}'
+        catchtap='select' 
+        wx:for="{{data}}" 
+        wx:key="index">{{item.index}}
+        <view class='yes' wx:if="{{item.status}}">
+          <image src='../../images/road32/yes.png'></image>
+        </view>
+      </view>
+    </view>
+    <view class='step2'>{{data[current].index}}组</view>
+    <view class='groups' >
+      <view class='group' catchtap='winSelect' id="0">
+        <view class='imgl'>
+          <image src='{{imgUrl}}{{data[current].data[0].img}}' id="0"></image>
+        </view>
+        <view class='namel {{select0?"active":""}}' id="0">{{data[current].data[0].title}}</view>
+      </view>
+      <view class='groupr' catchtap='winSelect' id="1">
+        <view class='imgr'>
+          <image src='{{imgUrl}}{{data[current].data[1].img}}' id="1"></image>
+        </view>
+        <view class='namer {{select1?"active":""}}'  id="1">{{data[current].data[1].title}}</view>
+      </view>
+      <view class='group' catchtap='winSelect' id="2">
+        <view class='imgl'>
+          <image src='{{imgUrl}}{{data[current].data[2].img}}' id="2"></image>
+        </view>
+        <view class='namel {{select2?"active":""}}' id="2">{{data[current].data[2].title}}</view>
+      </view>
+      <view class='groupr' catchtap='winSelect' id="3">
+        <view class='imgr'>
+          <image src='{{imgUrl}}{{data[current].data[3].img}}' id="3"></image>
+        </view>
+        <view class='namer {{select3?"active":""}}' id="3">{{data[current].data[3].title}}</view>
+      </view>
+    </view>
+
+    <view class='step2'>晋级</view>
+    <view class='win'>
+      <view class='group' wx:if="{{winOne}}">
+        <view class='imgl'>
+          <image src='{{imgUrl}}{{winGame[0].img}}'></image>
+        </view>
+        <view class='namel active'>{{winGame[0].title}}</view>
+        <view class='closel' catchtap='close1'>×</view>
+      </view>
+      <view class='groupr' wx:if="{{winTwo}}">
+        <view class='imgr'>
+           <image src='{{imgUrl}}{{winGame[1].img}}'></image>
+        </view>
+        <view class='namer active'>{{winGame[1].title}}</view>
+        <view class='closer' catchtap='close2'>×</view>
+      </view>
+    </view>
+    <button class='next' disabled='{{next}}' bindtap='next'>下一步</button>
+  </view>
+</view>

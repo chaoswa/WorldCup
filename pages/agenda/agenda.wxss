@@ -7,9 +7,13 @@ page, .page, .page__bd {
   padding-bottom: 0;
 }
 
+.weui-tab {
+  top: -195rpx;
+}
+
 .weui-tab__panel {
   position: relative;
-  top: -70rpx;
+  top: 0;
   display: flex;
   flex-flow: column;
   align-items: center;
@@ -18,6 +22,7 @@ page, .page, .page__bd {
 
 .weui-tab__content {
   width: 690rpx;
+  overflow: hidden;
   text-align: center;
 }
 
@@ -33,35 +38,27 @@ page, .page, .page__bd {
   line-height: 80rpx;
 }
 
-.agenda-top {
-  width: 100%;
-  overflow: hidden;
-}
-
-.agenda-top image {
-  width: 100%;
-  height: 180rpx;
-}
-
 .agenda-bor {
   width: 690rpx;
   border-radius: 10rpx;
+  margin-bottom: 30rpx;
   overflow: hidden;
 }
 
 .battle-left, .battle-right, .vs {
-  display: inline-block;
+  width: 200rpx;
   text-align: center;
-  margin: 20rpx 0;
 }
 
 .vs {
-  width: 417rpx;
+  width: 300rpx;
   height: 123rpx;
   font-size: 32rpx;
-  vertical-align: unset;
 }
-
+.subscribe{
+  position: relative;
+  z-index: 999;
+}
 .subscribe image {
   width: 33rpx;
   height: 39rpx;
@@ -92,6 +89,9 @@ page, .page, .page__bd {
   width: 100%;
   height: 206rpx;
   background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .bor-top {
@@ -108,7 +108,7 @@ page, .page, .page__bd {
   width: 690rpx;
   height: 540rpx;
   border-radius: 20rpx;
-  overflow: hidden;  
+  overflow: hidden;
   font-size: 28rpx;
   margin-bottom: 30rpx;
 }
@@ -118,11 +118,16 @@ page, .page, .page__bd {
   height: 100rpx;
   display: flex;
   /* justify-content: space-between; */
-  overflow: hidden; 
+  overflow: hidden;
   background-color: #fff;
 }
-.tr-tit{
+
+.tr-tit {
   height: 70rpx;
+}
+
+.tr-tit .th {
+  font-size: 27rpx;
 }
 
 .td {
@@ -131,73 +136,56 @@ page, .page, .page__bd {
   text-align: center;
   line-height: 100rpx;
 }
-.th{ 
-  width: 10%; 
+
+.th {
+  width: 10%;
   line-height: 70rpx;
   font-size: 30rpx;
   background-color: #dadada;
 }
-.th:nth-of-type(1){
+
+.th:nth-of-type(1) {
   width: 40%;
   text-align: left;
   padding-left: 20rpx;
   box-sizing: border-box;
 }
-.td:nth-of-type(1){
+
+.td:nth-of-type(1) {
   width: 40%;
   display: flex;
 }
-.td image{
+
+.td image {
   width: 84rpx;
   height: 50rpx;
+  margin: 20rpx 10rpx;
+  border: 2rpx solid lightgrey;
 }
 
-/*!
- * WeUI v1.1.1 (https://github.com/weui/weui-wxss)
- * Copyright 2017 Tencent, Inc.
- * Licensed under the MIT license
- */
+.t-num {
+  font-size: 35rpx;
+  font-weight: 450;
+  margin-left: 10rpx;
+}
 
 .weui-navbar {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: flex;
-  position: absolute;
-  z-index: 500;
-  top: 0;
-  width: 100%;
+  border-bottom: none;
 }
 
-.weui-navbar__item {
-  position: relative;
-  display: block;
-  -webkit-box-flex: 1;
-  -webkit-flex: 1;
-  flex: 1;
-  padding: 13px 0;
-  text-align: center;
-  font-size: 0;
-  color: #636c90;
-}
-
-.weui-navbar__item.weui-bar__item_on {
+.weui-bar__item_on view {
   color: #fefefe;
 }
 
 .weui-navbar__slider {
-  position: absolute;
-  content: " ";
-  left: 0;
-  bottom: 0;
-  width: 6em;
-  height: 3px;
   background-color: #fefefe;
-  -webkit-transition: -webkit-transform 0.3s;
-  transition: -webkit-transform 0.3s;
-  transition: transform 0.3s;
-  transition: transform 0.3s, -webkit-transform 0.3s;
 }
 
+.weui-navbar__title {
+  color: #636c90;
+}
+
+/* 
 .weui-navbar__title {
   display: inline-block;
   font-size: 15px;
@@ -207,4 +195,4 @@ page, .page, .page__bd {
   text-overflow: ellipsis;
   white-space: nowrap;
   word-wrap: normal;
-}
+}  */

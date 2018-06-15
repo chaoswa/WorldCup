@@ -1,0 +1,143 @@
+
+page{
+  width: 100%;
+  height: 100%;
+}
+.container{
+  width: 100%;
+  height: 100%;
+}
+.topBg{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+.content{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  font-size: 30rpx;
+  color: #fff;
+}
+.step1{
+  width: 690rpx;
+  height: 106rpx;
+  line-height: 106rpx;
+  text-align: left;
+}
+.select{
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: flex-start;
+  width: 690rpx;
+  height: 930rpx;
+}
+.item{
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  width: 690rpx;
+  height: 100rpx;
+}
+.iteml{
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 320rpx;
+  height: 100rpx;
+}
+.imgl{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 94rpx;
+  height: 94rpx;
+  border-radius: 50%;
+  background-color: #fff;
+}
+.imgl image{
+  width: 94rpx;
+  height: 94rpx;
+  border-radius: 50%;
+}
+.namel{
+  width: 200rpx;
+  height: 68rpx;
+  margin-left: 50rpx;
+  text-align: center;
+  line-height: 68rpx;
+  color: #fff;
+  background-color: #07185d;
+}
+.text{
+  width: 28rpx;
+  height: 80rpx;
+  margin-left: 0 10rpx;
+  font-size: 28rpx;
+  color:#6372b1;
+}
+
+
+.itemr{
+  position: relative;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  width: 320rpx;
+  height: 100rpx;
+}
+.imgr{
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 94rpx;
+  height: 94rpx;
+  border-radius: 50%;
+  background-color: #fff;
+}
+.imgr image{
+  width: 94rpx;
+  height: 94rpx;
+  border-radius: 50%;
+}
+.namer{
+  width: 200rpx;
+  height: 68rpx;
+  margin-right: 50rpx; 
+  text-align: center;
+  line-height: 68rpx;
+  color: #fff;
+  background-color: #07185d;
+}
+.vs{
+  width: 55rpx;
+  height: 90rpx;
+  text-align: center;
+  font-size: 36rpx;
+  line-height: 90rpx;
+}
+.next{
+  width: 300rpx;
+  height: 90rpx;
+  margin-top: 30rpx;
+  border-radius: 45rpx;
+  line-height: 90rpx;
+  text-align: center;
+  color: #07185d;
+  font-size: 30rpx;
+  background-color: #e9c30a;
+}
+.active{
+  color: #07185d;
+  background-color: #e9c30a;
+}

@@ -1,0 +1,15 @@
+<view class='container'>
+  <view class='from'>
+    <view class='balance'>
+      <text>账户余额：</text>
+      <text class='money'>12</text>元
+    </view>
+    <view class='get'>
+      <text>提现金额：</text>
+      <input placeholder="请输入提现金额"></input>
+    </view>
+    <view class='warning'>提现金额必须大于1元才可以提现哦</view>
+    <button class='btn-get'>提现</button>
+    <view class='hint'>1-5个工作日到账</view>
+  </view>
+</view>

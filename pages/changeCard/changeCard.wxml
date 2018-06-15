@@ -4,8 +4,11 @@
   <view class='cardList'>
     <image class='cardBg' src='../../images/changecard/cardBg.png'></image>
     <view class='cards'>
-      <image class='card' src='{{src}}'></image>
-      <button class='btn'>向好友索取星卡(转发好友)</button>
+      <image class='card {{getCard?"active":""}}' src='{{imgUrl}}{{src}}'></image>
+      <button class='btn' wx:if="{{getCard}}" open-type='share'>向好友索取星卡(转发好友)</button>
+      <button class='btn' wx:if="{{give}}" bindtap='give'>赠送星卡</button>
+      <button class='btn2' wx:if="{{give}}" bindtap='goback'>放弃赠送</button>
+      <button class='btn' wx:if="{{postCard}}" open-type='share'>赠送星卡给好友</button>
     </view>
   </view>
 </view>

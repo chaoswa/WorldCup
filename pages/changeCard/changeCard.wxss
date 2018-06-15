@@ -46,3 +46,17 @@ page{
   text-align: center;
   background-color: #fec302;
 }
+.btn2{
+  width: 557rpx;
+  height: 102rpx;
+  border-radius: 55rpx;
+  margin-top: 20rpx;
+  color: #663700;
+  font-size: 36rpx;
+  line-height: 102rpx;
+  text-align: center;
+  background-color: #fec302;
+}
+.active{
+  filter: grayscale(100%);
+}

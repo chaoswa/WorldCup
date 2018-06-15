@@ -1,18 +1,36 @@
 // pages/starcard/starcard.js
+const common = require('../common/common.js');
+const app=getApp();
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    cards: ["../../images/starcard/card01.png", "../../images/starcard/card02.png", "../../images/starcard/card03.png", "../../images/starcard/card04.png", "../../images/starcard/card05.png","../../images/starcard/card06.png", "../../images/starcard/card07.png", "../../images/starcard/card08.png", "../../images/starcard/card09.png", "../../images/starcard/card10.png", "../../images/starcard/card11.png", "../../images/starcard/card12.png", "../../images/starcard/card13.png", "../../images/starcard/card14.png", "../../images/starcard/card15.png"]
+    cards: [],
+    imgUrl:"https://cfy.chaosuduokai.com/wordcup2018/starcards/"
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-  
+
+    wx.showShareMenu({
+      withShareTicket: true
+    });
+
+    wx.showLoading({
+      title: '加载中',
+    })
+    let Url ="https://wdcup.chaosuduokai.com/index/api/starCardsList";
+    common.Get(Url).then(res=>{
+      console.log(res);
+      this.setData({
+        cards:res.data.data
+      })
+      wx.hideLoading();
+    })
   },
 
   /**
@@ -60,7 +78,16 @@ Page({
   /**
    * 用户点击右上角分享
    */
-  onShareAppMessage: function () {
-  
+  onShareAppMessage: function (res) {
+    let skey = app.globalData.loginData.skey;
+    let nickname = app.globalData.loginData.nickname;
+    if (res.from === 'button') {
+      console.log(res.target)
+    }
+    return {
+      title: '集齐15张球星卡，瓜分百万现金红包',
+      imageUrl:'../../images/share1.jpg',
+      path: '/pages/index/index?skey=' + skey
+    }
   }
 })

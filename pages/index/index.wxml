@@ -4,40 +4,68 @@
     <image class='top-title' src='../../images/index/title.png'></image>
   </view>
   <!--今日竞猜  -->
-  <view class='guessing'>
-    <view class='guessing-title'>今日竞猜</view>
-    <!--对战双方  -->
-    <view class='battle'>
-      <view class='battle-left'>
-        <image src='{{today_guessing_list[0].team_img}}'></image>
-        <view>{{today_guessing_list[0].team_name}}</view>
-      </view>
-      <view class='vs'>
-        <view class='vs-time'>23:00</view>
-        <view class='vs-tit'>VS</view>
-      </view>
-      <view class='battle-right'>
-        <image src='{{today_guessing_list[1].team_img}}'></image>
-        <view>{{today_guessing_list[1].team_name}}</view>
-      </view>
-    </view>
-    <!--竞猜剩余时间  -->
-    <view class='time'>剩余{{countDown}} 截止竞猜</view>
-    <!--竞猜选项  -->
-    <view class='select'>
-      <block wx:for='{{guessingOptions}}' wx:key=''>
-        <view data-val='{{item}}' bindtap='getOption'>{{item}}</view>
-      </block>
-    </view>
-    <view>
-      <form report-submit='true' bindsubmit="orderSign">
-        <button class='btn-ok' formType='submit'>提交竞猜</button>
-      </form>
-      <navigator class='result' url="" open-type="navigate">查看竞猜结果</navigator>
-    </view>
-  </view>
+  <swiper class='swiper-guessing' current='{{index}}' bindchange='getIndex' indicator-dots='true' indicator-color='#999999' indicator-active-color='#fff'>
+    <block wx:for="{{today_guessing_list}}" wx:key='{{index}}'>
+      <swiper-item class='pd'>
+        <view class='guessing'>
+          <view class='guessing-title'>今日竞猜</view>
+          <!--对战双方  -->
+          <view class='battle'>
+            <view class='battle-left'>
+              <image src='https://cfy.chaosuduokai.com/wordcup2018/{{item.team0_img}}'></image>
+              <view>{{item.team0_id}}</view>
+            </view>
+            <view class='vs'>
+              <view class='vs-time'>{{item.start_at}}</view>
+              <view class='vs-tit'>VS</view>
+            </view>
+            <view class='battle-right'>
+              <image src='https://cfy.chaosuduokai.com/wordcup2018/{{item.team1_img}}'></image>
+              <view>{{item.team1_id}}</view>
+            </view>
+          </view>
+          <!--竞猜剩余时间  -->
+          <view class='time'>剩余 {{countDown}} 截止竞猜</view>
+          <!--竞猜选项  -->
+          <view class='select'>
+            <block wx:for='{{guessingOptions}}' wx:key=''>
+              <view class="{{guessingOptions_index==index+1?'active':''}}" data-id='{{index+1}}' bindtap='getOption'>{{item}}</view>
+            </block>
+          </view>
+          <view class='form'>
+            <form report-submit='true' data-id='{{item.id}}' bindsubmit="orderSign">
+              <button class='btn-ok' formType='submit'>提交竞猜</button>
+            </form>
+            <navigator class='result' url="/pages/forecast/forecast" open-type="navigate">查看竞猜结果</navigator>
+          </view>
+        </view>
+      </swiper-item>
+    </block>
+  </swiper>
+
   <!--bg  -->
   <view class='bg'>
     <image src='../../images/index/bg.png'></image>
+  </view>
+</view>
+
+<!--冠军之路  -->
+<view class='win' bindtap='goWin'>
+  <image src='../../images/index/winner.png'></image>
+</view>
+
+<!--登陆界面 -->
+<view class='login' wx:if='{{showLogin}}'>
+  <view class='login-bor'>
+    <view class='login-tit'>授权作用，了解一下</view>
+    <view class='login-word'>
+      点击下方登录按钮进行授权，否则部分功能将无法使用，奖品可能无法获取
+      <view class='login-des'>（您的资料100%安全加密，不用担心）</view>
+    </view>
+    <view class='login-btn'>
+      <!-- <view class='login-not' bindtap='scope'>残忍拒绝</view>  -->
+      <button open-type="openSetting" bindopensetting='scope' class='login-not' wx:if='{{setting}}'>授权设置</button>
+      <button open-type='getUserInfo' bindgetuserinfo="getUserInfo" class='user'>登录授权</button>
+    </view>
   </view>
 </view>

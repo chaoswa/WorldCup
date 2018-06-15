@@ -1,1 +1,63 @@
-/* pages/user/user.wxss */
+page {
+  width: 100%;
+  background-color: #f2f2f2;
+}
+
+.container {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  color: #333;
+}
+
+button::after{
+  border:none;
+}
+
+.user {
+  width: 100%;
+  height: 342rpx;
+  position: relative;
+}
+
+.user-bg image {
+  width: 100%;
+  height: 342rpx;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -10;
+}
+
+.user-ava {
+  width: 120rpx;
+  height: 120rpx;
+  border-radius: 50%;
+  border: 3rpx solid #597bff;
+  overflow: hidden;
+  margin: 0 auto;
+  margin-top: 8%;
+}
+.user-name{
+  width: 500rpx;
+  text-align: center;
+  margin: 30rpx auto;
+  color: #fff;
+}
+.user-ava image {
+  width: 100%;
+  height: 100%;
+}
+.kefu{
+  background-color:#fff;
+  text-align: left;
+  height: 100rpx;
+}
+
+.weui-cell__bd {
+  font-size: 30rpx;
+}
+
+.weui-cell__hd image {
+  vertical-align: text-top;
+}

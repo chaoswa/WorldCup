@@ -1,15 +1,26 @@
 {
   "pages": [
-    "pages/mycard/mycard",
-    "pages/starcard/starcard",
-    "pages/agenda/agenda",
     "pages/index/index",
+    "pages/win/win",
+    "pages/agenda/agenda",
+    "pages/agendaDetail/agendaDetail",
+    "pages/withdraw/withdraw",
+    "pages/forecast/forecast",
     "pages/user/user",
-    "pages/logs/logs",
-    "pages/changeCard/changeCard"
+    "pages/starcard/starcard",
+    "pages/mycard/mycard",
+    "pages/road32/road32",
+    "pages/road4/road4",
+    "pages/road8/road8",
+    "pages/road16/road16",
+    "pages/road/road",
+    "pages/changeCard/changeCard",
+    "pages/roadphoto/roadphoto",
+    "pages/logs/logs"
   ],
   "window": {
     "backgroundTextStyle": "light",
+    "backgroundColor":"#021252",
     "navigationBarBackgroundColor": "#021252",
     "navigationBarTitleText": "世界杯",
     "navigationBarTextStyle": "#fff"

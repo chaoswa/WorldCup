@@ -1,2 +1,60 @@
-<!--pages/user/user.wxml-->
-<text>pages/user/user.wxml</text>
+<view class='container'>
+  <view class='user'>
+    <view class='user-info'>
+      <view class='user-ava'>
+        <open-data type='userAvatarUrl'></open-data>
+      </view>
+      <view class='user-name'>
+        <open-data type='userNickName'></open-data>
+      </view>
+    </view>
+    <!--bg  -->
+    <view class='user-bg'>
+      <image src='../../images/user/bg.png'></image>
+    </view>
+  </view>
+  <view class="weui-panel">
+    <view class="weui-panel__bd">
+      <view class="weui-media-box weui-media-box_small-appmsg">
+        <view class="weui-cells weui-cells_in-small-appmsg">
+          <navigator url="/pages/roadphoto/roadphoto" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+            <view class="weui-cell__hd">
+              <image src="../../images/user/icon_guanjun.png" style="width: 20px;height: 20px;margin-right: 5px" />
+            </view>
+            <view class="weui-cell__bd weui-cell_primary">
+              <view>我的冠军预测图</view>
+            </view>
+            <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+          </navigator>
+          <navigator url="/pages/forecast/forecast" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+            <view class="weui-cell__hd">
+              <image src="../../images/user/icon_yuce.png" style="width: 20px;height: 20px;margin-right: 5px" />
+            </view>
+            <view class="weui-cell__bd weui-cell_primary">
+              <view>我的预测</view>
+            </view>
+            <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+          </navigator>
+          <navigator url="/pages/mycard/mycard" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+            <view class="weui-cell__hd">
+              <image src="../../images/user/icon_xingka.png" style="width: 20px;height: 20px;margin-right: 5px" />
+            </view>
+            <view class="weui-cell__bd weui-cell_primary">
+              <view>我的球星卡</view>
+            </view>
+            <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+          </navigator>
+          <button open-type='contact' class="kefu weui-cell weui-cell_access" hover-class="weui-cell_active">
+            <view class="weui-cell__hd">
+              <image src="../../images/user/icon_kefu.png" style="width: 20px;height: 20px;margin-right: 5px" />
+            </view>
+            <view class="weui-cell__bd weui-cell_primary">
+              <view>在线客服</view>
+            </view>
+            <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+          </button>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

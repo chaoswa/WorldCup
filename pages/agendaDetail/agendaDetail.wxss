@@ -1,0 +1,261 @@
+page {
+  width: 100%;
+  background-color: #6e85df;
+}
+
+.container {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  color: #fff;
+}
+
+.team-bg {
+  width: 720rpx;
+  height: 366rpx;
+  position: relative;
+  top: -100rpx;
+  z-index: 100;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: space-between;
+  overflow: hidden;
+}
+
+.team-bg>image {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+.battle {
+  text-align: center;
+  margin: 20rpx 0;
+}
+
+.battle-left, .battle-right, .vs {
+  display: inline-block;
+  text-align: center;
+}
+
+.vs {
+  width: 217rpx;
+  height: 123rpx;
+  color: #fefefe;
+  vertical-align: top;
+}
+
+.vs-tit {
+  font-size: 60rpx;
+}
+
+.battle-left image, .battle-right image {
+  width: 217rpx;
+  height: 123rpx;
+}
+
+.c_select {
+  margin-top: -80rpx;
+}
+
+.c_select>view {
+  display: inline-block;
+  width: 228rpx;
+  height: 60rpx;
+  background-color: rgba(2, 18, 82, 0.5);
+  text-align: center;
+  font-size: 32rpx;
+  line-height: 60rpx;
+  margin: 0 2rpx;
+  color: #7b82a5;
+}
+
+.c_select>view:nth-of-type(1) {
+  border-top-left-radius: 10rpx;
+  border-bottom-left-radius: 10rpx;
+}
+
+.c_select>view:nth-of-type(3) {
+  border-top-right-radius: 10rpx;
+  border-bottom-right-radius: 10rpx;
+}
+
+.c_select .active {
+  background-color: rgba(2, 18, 82, 1);
+  color: #fff;
+}
+
+.detail {
+  width: 100%;
+  display: flex;
+  flex-flow: row nowrap;
+}
+
+.detail-cont {
+  display: inline-block;
+  position: relative;
+  width: 45%;
+  height: auto;
+  padding-bottom: 30rpx;
+}
+
+.detail-left, .detail-right, .battle-array {
+  width: 100%;
+  margin-top: 30rpx;
+}
+
+.detail-title {
+  font-size: 30rpx;
+  box-sizing: border-box;
+}
+
+.detail-title view {
+  margin-left: 10rpx;
+}
+
+.left {
+  margin-left: 195rpx;
+}
+
+.right {
+  margin-left: 60rpx;
+}
+
+.detail-title image {
+  width: 112rpx;
+  height: 61rpx;
+}
+
+.array-dec {
+  font-size: 25rpx;
+  margin-bottom: 30rpx;
+  text-align: center;
+}
+
+.battle-num {
+  display: inline-block;
+  width: 44rpx;
+  height: 44rpx;
+  border-radius: 50%;
+  background-color: #083084;
+  text-align: center;
+  line-height: 44rpx;
+}
+
+.battle-post {
+  color: #083084;
+  font-weight: bold;
+  margin: 0 10rpx;
+}
+
+.battle-name {
+  display: inline-block;
+  width: 220rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.football {
+  display: inline-block;
+  position: relative;
+  top: 200rpx;
+}
+
+.football image {
+  width: 75rpx;
+  height: 379rpx;
+}
+
+.real {
+  width: 690rpx;
+  margin-top: 30rpx;
+}
+
+.real-tit {
+  width: 100%;
+  height: 60rpx;
+  background-color: #445186;
+  border-top-left-radius: 20rpx;
+  border-top-right-radius: 20rpx;
+  display: flex;
+  flex-flow: row nowrap;
+  font-size: 30rpx;
+  line-height: 60rpx;
+}
+
+.th1 {
+  width: 15%;
+  text-align: left;
+  margin-left: 10rpx;
+}
+
+.th2 {
+  width: 15%;
+  text-align: left;
+}
+
+.th3 {
+  width: 20%;
+  text-align: left;
+}
+
+.th4 {
+  width: 15%;
+  text-align: left;
+}
+
+.th5 {
+  width: 35%;
+  text-align: left;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap; 
+}
+
+.real-cont {
+  width: 100%;
+  height: 70rpx;
+  line-height: 70rpx;
+  background-color: #899deb;
+  display: flex;
+  flex-flow: row nowrap;
+  font-size: 30rpx;
+}
+
+.real-cont view:nth-of-type(1) {
+  color: #083084;
+}
+
+.real-cont view:nth-of-type(2) {
+  opacity: 0.7;
+}
+
+.real-cont view:nth-of-type(4) {
+  color: #ffd200;
+}
+/* .video{
+  width: 720rpx;
+  height: 500rpx;
+} */
+#myVideo{
+  width: 720rpx;
+  height: 366rpx;
+  position: absolute;
+  top: 90rpx;
+  left: 15rpx;
+  z-index: 100; 
+}
+.video-bor{
+  width: 690rpx;
+  height: 171rpx;
+  margin-top: 30rpx;
+  /* border: 2rpx solid #9e9e9e; */
+  border-radius: 10rpx;
+  font-size: 32rpx;
+  text-align: center;
+}

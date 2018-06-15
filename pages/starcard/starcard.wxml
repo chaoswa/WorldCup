@@ -4,7 +4,7 @@
   <view class='cardList'>
     <image class='cardBg' src='../../images/starcard/cardBg.png'></image>
     <view class='cards'>
-      <image class='card active' wx:for="{{cards}}" src='{{item}}'></image>
+      <image class='card active' wx:for="{{cards}}" wx:key="index" src='{{imgUrl}}{{item}}'></image>
       <button class='btn' open-type='share'>
         <image src='../../images/starcard/share.png'></image>
         <view>分享拿星卡</view>

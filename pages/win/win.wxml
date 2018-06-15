@@ -1,0 +1,34 @@
+<!--pages/win/win.wxml-->
+<view class='container'>
+  <image class='topBg' src='../../images/road32/winbg.png'></image>
+  <view class='content'>
+    <image class='winer' src='{{imgUrl}}{{win[0].img}}'></image>
+    <image class='getwin2' src='../../images/road32/getwin2.png'></image>
+    <view class='wintext'>
+      <text class='wintxt'>我是{{nickname}}</text>
+      <text class='wintxt'>我支持的冠军之队是</text>
+      <text class='winName'>{{win[0].title}}</text>
+    </view>
+    <view class='maerbg'>
+      <image class='maer' src='../../images/road32/maer.jpg'></image> 
+    </view>
+
+    <view class='btn'>
+      <view class='btn1'  bindtap='share'>保存图片</view>
+      <button class='btn2' open-type='share'>分享好友</button>
+    </view>
+    
+  </view>
+  <canvas  canvas-id="shareImg" style="width:545px;height:765px"></canvas>
+
+  <view hidden='{{hidden}}' class='model'>
+    <view class='modelContent'>
+      <image src='{{prurl}}' mode='widthFix'></image>
+      <button class='btn3' bindtap='save'>确定</button>
+    </view>
+  </view>
+
+</view>
+
+
+

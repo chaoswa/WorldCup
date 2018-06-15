@@ -1,0 +1,28 @@
+<!--pages/road16/road16.wxml-->
+<!--pages/road32/road32.wxml-->
+<view class='container'>
+  <image class='topBg' src='../../images/road32/bg.png'></image>
+  <view class='content'>
+    <view class='step1'>第二步：1/8决赛（选择16进8 晋级球队）</view>
+    <view class='select'>
+      <view class='item' wx:for="{{data}}" wx:key="index" >
+        <view class='iteml' data-index='0' bindtap='select' id='{{index}}'>
+          <view class='imgl'>
+            <image src='{{imgUrl}}{{item.arr[0].img}}'></image>
+          </view>
+          <view class='namel {{item.status1?"active":""}}'>{{item.arr[0].title}}</view>
+          <view class="text" wx:if="{{item.status1}}">晋级</view>
+        </view>
+        <view class='vs'>VS</view>
+        <view class='itemr' data-index='1' bindtap='select' id='{{index}}'>
+          <view class="text" wx:if="{{item.status2}}">晋级</view>
+          <view class='namer {{item.status2?"active":""}}'>{{item.arr[1].title}}</view>
+          <view class='imgr'>
+            <image src='{{imgUrl}}{{item.arr[1].img}}'></image>
+          </view>
+        </view>
+      </view>
+    </view>
+    <button class='next' disabled='{{next}}' bindtap='next'>下一步</button>
+  </view>  
+</view>

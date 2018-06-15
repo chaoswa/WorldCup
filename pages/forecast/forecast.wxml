@@ -1,0 +1,74 @@
+<view class='container'>
+  <!--顶部背景  -->
+  <view class='agenda-top'>
+    <image src='../../images/top.png'></image>
+  </view>
+  <!--竞猜记录  -->
+  <bolck wx:for='{{guess_list}}' wx:key=''>
+    <view class='agenda-bor'>
+      <view class='bor-top'>{{item.start_day}} {{item.week}}</view>
+      <view class='bor-cont'>
+        <view class='battle-left'>
+          <image src='https://cfy.chaosuduokai.com/wordcup2018/{{item.team0_img}}'></image>
+          <view>{{item.team0}}</view>
+        </view>
+        <view class='vs'>
+          <view class='vs-tit'>{{item.title}}</view>
+          <view class='vs-time'>{{item.team0_goal}} - {{item.team1_goal}}</view>
+          <view class='bingo' wx:if='{{item.guessResult == 1}}' bindtap='bingo'>领取红包</view>
+        </view>
+        <view class='battle-right'>
+          <image src='https://cfy.chaosuduokai.com/wordcup2018/{{item.team1_img}}'></image>
+          <view>{{item.team1}}</view>
+        </view>
+      </view>
+      <!--预测成功/失败  -->
+      <view class='suc'>
+        <image src='../../images/yc_yes.png' wx:if='{{item.guessResult == 1}}'></image>
+        <image src='../../images/yc_no.png' wx:if='{{item.guessResult == 0}}'></image>
+      </view>
+    </view>
+  </bolck>
+
+  <!--无竞猜记录  -->
+  <view class='not-have' wx:if='{{notHave}}'>
+    <image src='../../images/wu.png'></image>
+    <view>您还没有参与比赛竞猜</view>
+  </view>
+  <!--比赛还没结束  -->
+  <view class='not-have' wx:if='{{nomal}}'>
+    <image src='../../images/wu.png'></image>
+    <view>比赛还未结束，请稍后查看</view>
+  </view>
+  <!--文案  -->
+  <view class='title'>
+    <image src='../../images/wenan.png'></image>
+  </view>
+  <!--福袋  -->
+  <view class='packet' bindtap='showPacket'>
+    <image src='../../images/fudai.png'></image>
+  </view>
+  <!--二维码/二维码图380*380  -->
+  <view class='mask' wx:if='{{showActivity}}'>
+    <view class='off-close' bindtap='close'>×</view>
+    <view class='off-bor'>
+      <text class='off-tit'>活动奖品</text>
+      <text class='off-cont'>-百万现金红包</text>
+    </view>
+    <view class='off-bor'>
+      <text class='off-tit'>活动时间</text>
+      <text class='off-cont'>-世界杯时间（2018.6.14—2018.7.15）</text>
+    </view>
+    <view class='off-bor'>
+      <text class='off-tit'>如何参与</text>
+      <text class='off-cont'>-每天参与球队预测，
+      -预测成功就能抽取现金红包</text>
+    </view>
+    <view class='off-bor'>
+      <text class='off-tit tit'>如何领奖</text>
+      <text class='off-cont'>-点击下方【领取红包】按钮，回复"1"
+      -就有机会领取现金红包</text>
+    </view>
+    <button class='btn-look' open-type='contact'>领取红包</button>
+  </view>
+</view>
